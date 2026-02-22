@@ -287,6 +287,8 @@ Below is the generated Allure execution report:
 
 ![Allure Report](screenshots/allurereport.png)
 
+<img src="screenshots/allurereport.png" width="900"/>
+
 # <img width="100%" src="https://raw.githubusercontent.com/AvinashGandi-LEAD-SDET-Automation/personal-drive/main/photos/allurereport.png" />
 
 👨‍💻 Author
