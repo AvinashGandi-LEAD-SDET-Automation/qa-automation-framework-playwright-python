@@ -280,9 +280,11 @@ Environment-based execution (QA/UAT/Prod)
 Automated notification integration (Slack/Email)
 Test result trend analysis
 
-## 📊 Allure Report {exeucition Results}
+## 📊 Allure Report (Execution Results)
+
 Below is the generated Allure execution report:
-![Allure test execution summary dashboard showing 16 test cases with 87.5% pass rate dated 2/22/2026, displaying test suite breakdown of 2 UI tests with 2 failures and 11 passes, 3 API tests all passing, and features by stories including Product Page Functionality with 1 failure and 3 passes, Login Functionality with 1 failure and 2 passes, Api Validations with 3 passes, and Async Functionality with 3 passes](https://raw.githubusercontent.com/AvinashGandi-LEAD-SDET-Automation/personal-drive/refs/heads/main/photos/allurereport.png)
+
+![Allure Report](https://raw.githubusercontent.com/AvinashGandi-LEAD-SDET-Automation/personal-drive/main/photos/allurereport.png)
 
 👨‍💻 Author
 Avinash Gandi
