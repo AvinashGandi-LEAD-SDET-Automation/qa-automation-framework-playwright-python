@@ -285,9 +285,9 @@ Test result trend analysis
 
 Below is the generated Allure execution report:
 
-![Allure Report](https://akm-img-a-in.tosshub.com/indiatoday/images/story/202507/virat-kohli-045803419-16x9.jpg?VersionId=.xtTAb1dS7JZkIrGodYDhGXQJ06eykFS&size=690:388)
+![Allure Report](screenshots/allurereport.png)
 
-<img width="100%" src="https://raw.githubusercontent.com/AvinashGandi-LEAD-SDET-Automation/personal-drive/main/photos/allurereport.png" />
+# <img width="100%" src="https://raw.githubusercontent.com/AvinashGandi-LEAD-SDET-Automation/personal-drive/main/photos/allurereport.png" />
 
 👨‍💻 Author
 Avinash Gandi
