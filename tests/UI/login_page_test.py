@@ -3,12 +3,9 @@ from pages.produtct_page import ProductPage
 import time
 import allure
 
-# @allure.feature("Login Functionality")
-# @allure.story("User Login")
-# class LoginPageTest:
 
-#     @allure.title("Verify user can login successfully with valid credentials")
-#     @allure.severity(allure.severity_level.NORMAL)
+
+#@allure.title("Verify user can login successfully with valid credentials")
 
 @allure.feature("Login Functionality")
 @allure.story("Valid user Login")
@@ -20,6 +17,7 @@ def test_login_page(page):
         assert login_page.get_title() == "Swag Labs"
         login_page.login("visual_user","secret_sauce")
         login_page.get_title() == "Swag Labs"
+        assert product_page.is_logged_in()
        
     
 
@@ -40,7 +38,6 @@ def test_login_pageerror(page):
 @allure.severity(allure.severity_level.NORMAL)
 def test_login_page_failed(page):
         login_page = LoginPage(page)
-        product_page = ProductPage(page)
         login_page.navigate()
         assert login_page.get_title() == "Swag Labs"
         login_page.login("visual_user","wrong_password")

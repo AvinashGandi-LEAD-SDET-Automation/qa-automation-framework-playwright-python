@@ -10,7 +10,8 @@ class LoginPage:
         self.loginerror_message = page.locator(".error-button")
 
     def navigate(self):
-        self.page.goto("https://www.saucedemo.com/")
+        with allure.step("Navigating to the login page"):
+            self.page.goto("https://www.saucedemo.com/")
 
     def login(self, username, password):
         with allure.step(f"Logging in with username: {username} and password: {password}"):

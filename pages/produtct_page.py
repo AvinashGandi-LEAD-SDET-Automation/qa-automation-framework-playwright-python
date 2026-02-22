@@ -9,7 +9,7 @@ class ProductPage:
 
         # Products page title
         self.products_title = page.locator(".title")
-
+        
         # Inventory items
         self.inventory_items = page.locator(".inventory_item")
 
