@@ -280,6 +280,7 @@ Environment-based execution (QA/UAT/Prod)
 Automated notification integration (Slack/Email)
 Test result trend analysis
 
+
 ## 📊 Allure Report (Execution Results)
 
 Below is the generated Allure execution report:
