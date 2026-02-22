@@ -280,16 +280,15 @@ Environment-based execution (QA/UAT/Prod)
 Automated notification integration (Slack/Email)
 Test result trend analysis
 
-
 ## 📊 Allure Report (Execution Results)
 
-Below is the generated Allure execution report:
+The automation framework integrates **Allure Reporting** to provide detailed execution insights including test steps, execution status, and failure analysis.
+⚠️ **Note:**  
+If the Allure report preview image is not visible due to GitHub rendering limitations, please use the below link to view the execution report directly:
 
-![Allure Report](screenshots/allurereport.png)
+🔗 **Allure Report Link:**  
+https://raw.githubusercontent.com/AvinashGandi-LEAD-SDET-Automation/personal-drive/main/photos/allurereport.png
 
-<img src="screenshots/allurereport.png" width="900"/>
-
-# <img width="100%" src="https://raw.githubusercontent.com/AvinashGandi-LEAD-SDET-Automation/personal-drive/main/photos/allurereport.png" />
 
 👨‍💻 Author
 Avinash Gandi
