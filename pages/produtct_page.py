@@ -1,4 +1,5 @@
 from playwright.sync_api import Page
+import allure
 
 
 class ProductPage:
@@ -45,13 +46,16 @@ class ProductPage:
     # ---------- Actions ----------
 
     def add_first_product_to_cart(self):
-        self.add_to_cart_buttons.first.click()
+        with allure.step("Adding first product to cart"):
+            self.add_to_cart_buttons.first.click()
 
     def add_product_to_cart_by_index(self, index: int):
-        self.add_to_cart_buttons.nth(index).click()
+        with allure.step(f"Adding product at index {index} to cart"):
+            self.add_to_cart_buttons.nth(index).click()
 
     def open_cart(self):
-        self.cart_icon.click()
+        with allure.step("Opening cart page"):
+            self.cart_icon.click()
 
     def add_product_to_cart(self, product_name: str):
 
@@ -62,15 +66,18 @@ class ProductPage:
                 has_text=product_name
             )
         )
-        product.locator("button").click()
+        with allure.step(f"Adding product '{product_name}' to cart"):
+            product.locator("button").click()
 
     def get_cart_count(self):
 
         if self.cart_badge.is_visible():
-            return int(self.cart_badge.text_content().strip())
+            with allure.step("Getting cart count"):
+                return int(self.cart_badge.text_content().strip())
 
         return 0
     
     def add_multiple_products_to_cart(self, product_names: list):
         for product_name in product_names:
-            self.add_product_to_cart(product_name)
+            with allure.step(f"Adding product '{product_name}' to cart"):
+                self.add_product_to_cart(product_name)

@@ -1,5 +1,5 @@
 from playwright.sync_api import expect
-
+import allure
 
 class LoginPage:
     def __init__(self, page):
@@ -13,10 +13,12 @@ class LoginPage:
         self.page.goto("https://www.saucedemo.com/")
 
     def login(self, username, password):
-        self.username_input.fill(username)
-        self.password_input.fill(password)
-        self.login_button.click()
-     #   expect(self.page.locator(".inventory_list")).to_be_visible()
+        with allure.step(f"Logging in with username: {username} and password: {password}"):
+            self.username_input.fill(username)
+            self.password_input.fill(password)
+        with allure.step("Clicking login button"):
+            self.login_button.click()
+      #  expect(self.page.locator(".inventory_list")).to_be_visible()
     
     def get_title(self):
         return self.page.title()

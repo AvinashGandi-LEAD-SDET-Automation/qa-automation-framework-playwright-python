@@ -1,4 +1,5 @@
 from playwright.sync_api import Page
+import allure
 
 
 class CartPage:
@@ -21,15 +22,21 @@ class CartPage:
     # ---------- Validations ----------
 
     def is_cart_page_displayed(self):
-        return self.cart_title.is_visible()
+        with allure.step("Checking if cart page is displayed"):
+            return self.cart_title.is_visible()
 
     def get_cart_items_count(self):
-        return self.cart_items.count()
+        with allure.step("Getting count of items in cart"):
+            return self.cart_items.count()
 
     # ---------- Actions ----------
 
     def click_checkout(self):
-        self.checkout_button.click()
+        with allure.step("Clicking checkout button"):
+            self.checkout_button.click()
 
     def continue_shopping(self):
-        self.continue_shopping_button.click()
+        with allure.step("Clicking continue shopping button"):
+            self.continue_shopping_button.click()
+
+    

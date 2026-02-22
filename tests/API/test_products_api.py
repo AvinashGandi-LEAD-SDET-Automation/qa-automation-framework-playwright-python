@@ -1,9 +1,10 @@
+import allure
+
 from api.products_client import ProductsClient
 
-# ---------------------------------------
-# Test 1
-# GET /products – basic validation
-# ---------------------------------------
+@allure.feature("Api Validations")
+@allure.story("GET /products endpoint validations")
+@allure.severity(allure.severity_level.NORMAL)
 def test_get_all_products():
 
     client = ProductsClient()
@@ -25,10 +26,9 @@ def test_get_all_products():
     assert isinstance(product["price"], (int, float))
 
 
-# ---------------------------------------
-# Test 2
-# GET /products/{id}
-# ---------------------------------------
+@allure.feature("Api Validations")
+@allure.story("GET /products/{id} endpoint validations")
+@allure.severity(allure.severity_level.NORMAL)
 def test_get_single_product():
 
     client = ProductsClient()
@@ -47,10 +47,9 @@ def test_get_single_product():
     assert isinstance(product["price"], (int, float))
 
 
-# ---------------------------------------
-# Test 3
-# Negative API Test
-# ---------------------------------------
+@allure.feature("Api Validations")
+@allure.story("GET product with invalid ID")
+@allure.severity(allure.severity_level.NORMAL)
 def test_get_product_invalid_id():
 
     client = ProductsClient()

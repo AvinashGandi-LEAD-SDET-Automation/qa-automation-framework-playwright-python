@@ -1,10 +1,10 @@
 from pages.login_page import LoginPage
 from pages.produtct_page import ProductPage
+import allure
 
-# --------------------------------------------------
-# Test 1
-# Wait for element to become visible after login
-# --------------------------------------------------
+@allure.feature("Async Functionality")
+@allure.story("explicit wait for products page to load")
+@allure.severity(allure.severity_level.NORMAL)
 def test_wait_for_products_page_load(page):
 
     login_page = LoginPage(page)
@@ -18,10 +18,10 @@ def test_wait_for_products_page_load(page):
 
     assert product_page.products_title.is_visible()
 
-# --------------------------------------------------
-# Test 2
-# Wait for dynamic UI update (cart badge)
-# --------------------------------------------------
+@allure.feature("Async Functionality")
+@allure.story("dynamic wait for cart badge to appear")
+@allure.severity(allure.severity_level.NORMAL)
+
 def test_cart_badge_wait(page):
 
     login_page = LoginPage(page)
@@ -40,10 +40,9 @@ def test_cart_badge_wait(page):
     assert cart_count == 1
 
 
-# --------------------------------------------------
-# Test 3
-# Auto wait during navigation after click
-# --------------------------------------------------
+@allure.feature("Async Functionality")
+@allure.story("wait during navigation after clicking cart icon")
+@allure.severity(allure.severity_level.NORMAL)
 def test_navigation_auto_wait(page):
 
     login_page = LoginPage(page)

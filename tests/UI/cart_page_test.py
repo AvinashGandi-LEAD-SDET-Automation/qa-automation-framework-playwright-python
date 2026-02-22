@@ -1,13 +1,12 @@
 from pages.login_page import LoginPage
 from pages.produtct_page import ProductPage
 from pages.cart_page import CartPage
+import allure
 
 
-
-# ----------------------------------------
-# Test Case 1
-# Verify user can navigate to cart page
-# ----------------------------------------
+@allure.feature("Cart Page Functionality")
+@allure.story("Navigate to Cart Page")
+@allure.severity(allure.severity_level.NORMAL)
 def test_navigate_to_cart(page):
 
     login_page = LoginPage(page)
@@ -23,10 +22,9 @@ def test_navigate_to_cart(page):
     assert cart_page.is_cart_page_displayed()
 
 
-# ----------------------------------------
-# Test Case 2
-# Verify added product appears in cart
-# ----------------------------------------
+@allure.feature("Cart Page Functionality")
+@allure.story("Verify Cart Items Count")
+@allure.severity(allure.severity_level.NORMAL)
 def test_cart_items_count(page):
 
     login_page = LoginPage(page)
@@ -48,10 +46,9 @@ def test_cart_items_count(page):
     assert cart_items == 2
 
 
-# ----------------------------------------
-# Test Case 3
-# Verify checkout button navigation
-# ----------------------------------------
+@allure.feature("Cart Page Functionality")
+@allure.story("Checkout Navigation")
+@allure.severity(allure.severity_level.NORMAL)
 def test_checkout_navigation(page):
 
     login_page = LoginPage(page)
