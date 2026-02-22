@@ -8,13 +8,14 @@ def pw_instance():
 
 @pytest.fixture(scope="session")
 def browser(pw_instance):
-    browser = pw_instance.chromium.launch(headless=False, args=["--start-maximized"])
+   # browser = pw_instance.chromium.launch(headless=False, args=["--start-maximized"])
+    browser = pw_instance.chromium.launch(headless=False)
     yield browser
     browser.close()
 
 @pytest.fixture(scope="function")
 def context(browser):
-    context = browser.new_context()
+    context = browser.new_context(viewport=None)
     yield context
     context.close()
 
