@@ -46,6 +46,7 @@ def test_add_specific_product_to_cart(page):
     login_page.login("standard_user", "secret_sauce")
 
     product_page.add_product_to_cart("Sauce Labs Backpack")
+    product_page.add_product_to_cart("Sauce Labs Bike Light")
     cart_count = product_page.get_cart_count()
     time.sleep(3)
-    assert cart_count == 1
+    assert cart_count == 2
